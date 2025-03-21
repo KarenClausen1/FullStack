@@ -1,0 +1,65 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+#layout {
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    display: grid;
+    /* espaciado entre elementos */
+    grid-gap: 10px;
+    border: 2px solid black;
+    padding: 10px;
+    /* defino dos columnas que ocupan una fraccion del layout cada una */
+    grid-template-columns: 1fr 1fr;
+    /* tambien se puede especificar de la siguiente manera */
+    grid-template-columns: repeat(2, 1fr);
+    /* armamos las filas */
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#layout .caja {
+    font-size: 20px;
+    font-weight: bold;
+    color: aliceblue;
+    padding: 20px;
+    border: 2px solid #222;
+    background-color: rgba(194, 106, 172, 0.864);
+}
+
+#layout .red {
+    background-color: red;
+    /* para que la caja roja ocupe las columnas 1 y 2 */
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#layout .green {
+    background-color: green;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+#layout .blue {
+    background-color: blue;
+}
+
+#layout .pink {
+    background-color: pink;
+}
+
+#layout .orangered {
+    background-color: orangered;
+}
+
+#layout .orange {
+    background-color: orange;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+
+
+

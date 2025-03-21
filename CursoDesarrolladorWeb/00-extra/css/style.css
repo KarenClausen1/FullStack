@@ -1,0 +1,11 @@
+.container{
+    color: rgba(209, 151, 74, 0.899);
+    background-color: hsla(183, 49%, 64%, 0.736);
+
+}
+
+.container img {
+    width: 550px;
+    height: 650px;
+    filter: hue-rotate(180deg); /* Cambia los colores completamente */
+}

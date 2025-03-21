@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+}
+
+/*PARA BACKGROUND*/
+.container {
+    width: 50%; /*estilo responsive*/
+    height: 300px;
+    background-color: lightgray; /* Para que se vea */
+    margin: 30px auto;
+    border: 2px solid black; /* Para que tenga bordes */
+    background-image: url(../img/montañas.jpg);
+    background-repeat: no-repeat;
+    background-position: top; 
+    background-size: cover;
+
+}
+
+.clase {
+    width: 100%;
+    height: 100vh; /* Ocupa todo el alto de la pantalla */
+    background-image: url(../img/estrellas.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.dos {
+    background-attachment: fixed;
+
+}
+
+.degradado {
+    width: 80%;
+    height: 400px;
+    margin: 30px auto;
+    background-color: dimgrey;
+    background: linear-gradient(to top, crimson 30%, steelblue 70%);
+}
+
+.header {
+    padding: 10px; /* Ajuste razonable */
+    min-height: 650px; /* Evita problemas en diseños flexibles */
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(146,24,86,1) 100%, rgba(0,212,255,1) 100%);
+}
+
+.box1 {
+    background-color: aquamarine;
+    border: 1px solid black;
+}
+
+.box2 {
+    border: 2px solid steelblue;
+    overflow: hidden;
+}
+
+.box {
+    background-color: antiquewhite;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 40px;
+
+    
+    /*border: 10px dashed brown;*/
+
+    /*border-width: top right bottom left;
+    border-style: top right bottom left;
+    border-color: top right bottom left;*/
+
+    /*border-top: 10px solid brown;
+    border-right: 5px dashed white;
+    border-bottom: 8px double black;
+    border-left: 8px dotted slategrey;*/
+
+    /*border: width style color;*/
+
+    border-top-width: 20px;
+    border-top-style: double;
+    border-top-color: crimson;
+
+    border-right-width: 30px;
+    border-right-style: dashed;
+    border-right-color: white;
+
+    border-bottom-width: 25px;
+    border-bottom-style: solid;
+    border-bottom-color: steelblue;
+
+    border-left-width: 15px;
+    border-left-style: dotted;
+    border-left-color: violet;
+}
+
+.img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /*adapta la imagen para que no se estire*/
+    margin: 20px auto;
+    border-radius: 50%; /*redondea completamente siempre que haya un mismo alto y ancho*/
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 20px;
+    
+}

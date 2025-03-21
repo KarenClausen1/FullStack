@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi sitio web con HTML</title>
+    <link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+<form action="" method="GET">
+
+    <label for="nom">Ingrese su nombre</label>
+    <br>
+    <input type="text" placeholder="Por ejemplo: Karen" maxlength="8" minlength="1" name="nombres" id="nom" size="20"> <!--tener en cuenta que los espacios cuentan como caracteres-->
+    <!--con size cambiamos el tamaño de la barra del input para que sea mas grande o mas pequeña-->
+    <br><br>
+    <label>Ingrese su email:</label>
+    <br>
+    <input type="email" name="email" id="email">
+    <br><br>
+    <label>Ingrese su contraseña:</label>
+    <br>
+    <input type="password" name="password">
+    <br><br>
+    <label>Ingrese su edad:</label>
+    <br>
+    <input type="number" name="edad" id="edad" max="100" min="18">
+    <br><br>
+    <label>Sexo:</label>
+    <br>
+    <input type="radio" name="sexo" value="masculino"> Masculino
+    <input type="radio" name="sexo" value="femenino"> Femenino
+    <br><br>
+    <input type="button" value="Enviar">
+    <input type="submit" value="submit">
+    <br><br>
+    <label>Ingrese su país de residencia:</label>
+    <br>
+    <select name="pais" id="">
+    <option value="Argentina">Argentina</option>
+    <option value="Brasil">Brasil</option>
+    <option value="Chile">Chile</option> 
+    <option value="Colombia">Colombia</option> 
+    <option value="Uruguay">Uruguay</option> 
+    <option value="Paraguay">Paraguay</option> 
+    <option value="Venezuela">Venezuela</option>
+    <input type="color" name="color" id="">
+    <input type="range" name="rango" id="">
+    </select>
+
+</form>
+
+</body>
+</html>

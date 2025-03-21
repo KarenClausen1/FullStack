@@ -1,0 +1,26 @@
+Spanish Language Pack for Visual Studio Code
+vscode-icons
+
+PARA HTML=
+
+Class autocomplete for HTML
+HTML Boilerplate
+HTML Snippets
+
+PARA CSS=
+
+IntelliSense for CSS class names in HTML
+Live Server
+Live Server (Five Server)
+VS Color Picker
+
+PARA JS
+
+DETECTA ERRORES DE SINTAXIS =ESLint
+ATAJOS,FRAGMENTOS DE CODIGO = JavaScript (ES6) code snippets
+DEPURADOR= JavaScript Debugger (Nightly)
+
+OPCIONALES=
+ATAJOS,FRAGMENTOS DE CODIGO = 
+JavaScript Snippet Pack
+JavaScript standardjs styled snippets

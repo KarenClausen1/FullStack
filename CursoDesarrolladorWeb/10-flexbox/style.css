@@ -1,0 +1,69 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.caja {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: aliceblue;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 10px;
+    background-color:darkseagreen;
+}
+
+#layout {
+    display: flex;
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+    /* con esta sola linea me ahorro de poner flex direction: row y flex wrap: wrap. Puedo poner column tambien */
+    flex-flow: row wrap;
+    /* en ambos casos alinea el contenido a la izquierda */
+    justify-content: left;
+    justify-content: start;
+    /* contenido alineado a la derecha */
+    justify-content: start;
+    /* contenido alineado al centro */
+    justify-content: center;
+    /* da espacios entre cajas*/
+    /* justify-content: space-around; */
+    /*da espacios entre cajas juntando un poquito mas*/
+    /* justify-content: space-evenly; */
+    /*da espacios entre cajas pero a la primera y a la ultima caja las pega contra el costado del viewport*/
+    /* justify-content: space-between; */
+    align-items: flex-start;
+    border: 3px solid black;
+    padding: 5px;
+    height: 500px;
+}
+
+.red {
+    background-color: red;
+    flex-grow: 2;
+}
+
+.green {
+    order: 2;
+    background-color: green;
+}
+
+.blue {
+    order: 1;
+    background-color: blue;    
+    align-self: center;
+    /* funciona siempre que el contenedor principal tenga align-items y algun valor */
+}
+
+.orange {
+    order: 3;
+    background-color: orange;
+}
+
+
+
+
+
+

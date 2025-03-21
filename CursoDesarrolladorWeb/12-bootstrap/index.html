@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Aprendiendo Bootstrap en el curso de Full Stack Web Developer</h1>
+    <h2>Esta herramienta la utilizaremos para diseñar</h2>
+
+    <div class="container-fluid"> 
+        <!-- si es fluid ocupa el 100% del ancho de la pantalla -->
+        <!-- el container de por si es una caja centrada -->
+         <!-- 12 columnas es el maximo -->
+          <div class="row">
+            <header class="col-12 bg-primary text-white p-2">
+                <h1>aprendiendo boostrap en el curso</h1>
+            </header>
+
+            <nav id="menu" class="col-12 bg-secondary text-white">
+                <!-- con col 12 especifico que se ocupe el 100% del ancho disponible -->
+                <!-- especifico que voy a tener una fila con 5 columnas de igual tamaño
+                w-50 un ancho de 50% junto los li -->
+
+                <ul class="row w-50">
+                <!-- define una fila dentro del sistema grid. w-50 significa que ocupa la mitad del ancho del contenedor (el contenedor es nav) -->
+                    <li class="col">Inicio</li>
+                    <li class="col">Plantilla 1</li>
+                    <li class="col">Plantilla 2</li>
+                    <li class="col"> Plantilla 3</li>
+                    <li class="col">Contacto</li>
+                    <!-- al ser 5 elementos, cada uno ocupa el 20% -->
+                </ul>
+
+            </nav>
+
+            <!-- Creo una fila para dividir el contenido principal y la barra lateral -->
+            <div class="row">
+                
+                <!-- Contenido principal -->
+                <section class="col-9 border">
+                    <h2>Cajas</h2>
+                    <hr>
+                    <!-- m-2 es un margen -->
+                    <div class="row">
+                        <div class="col bg-primary m-2">caja 1</div>
+                        <div class="col bg-warning m-2">caja 2</div>
+                        <div class="col bg-danger m-2">caja 3</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="item col col-lg col-md-12 col-sm-12 bg-primary">item 1</div>
+                        <div class="item col col-lg col-sm-3 bg-warning">item 2</div>
+                        <div class="item col col-lg col-sm-3 bg-danger">item 3</div>
+                    </div>
+                </section>
+
+                <!-- Barra lateral alineada al costado -->
+                <aside class="col-3 border">
+                    <h2>barra lateral</h2>
+                    <div class="lateral row bg-light">
+                        <div class="late col-4 bg-primary">
+                            numero 1
+                        </div>
+                        <div class="late col-4 bg-success">
+                            numero 2
+                        </div>
+                        <div class="late col-4 bg-warning">
+                            numero 3
+                        </div>
+                        <!--tambien con el order puedo cambiar como con flexbox-->
+                        <div class="late col-4 bg-primary order-3">
+                            numero 4
+                        </div>
+                        <div class="late col-4 bg-success order-1">
+                            numero 5
+                        </div>
+                        <div class="late col-4 bg-warning order-2">
+                            numero 6
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+            
+            <!-- Nueva fila para productos -->
+            <div class="row mt-5 justify-content-center">
+                <div class="item col-3 bg-primary m-2">productoA</div>
+                <div class="item col-3 bg-warning m-2">productoB</div>
+            </div>
+            
+            <!-- Nueva fila para elementos -->
+            <div class="row">
+                <div class="item col-3 bg-primary">elemento1</div>
+                <div class="item col-3 bg-warning">elemento2</div>
+                <div class="item col-3 bg-danger">elemento3</div>
+                <!-- offset le da un espaciado entre 3 y 4 de una columna -->
+                <div class="item col-2 bg-danger offset-1">elemento4</div>
+            </div>
+
+          </div> <!-- Cierre de la fila principal -->
+
+    </div> <!-- Cierre de container-fluid -->
+
+    
+    <script type="text/javascript" src="jquery/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+    
+    <script type="text/javascript"
+    src="jquery/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

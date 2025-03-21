@@ -1,0 +1,87 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+#container {
+    width: 70%;
+    background: rgb(235, 237, 178);
+    margin: 0px auto;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 40px;
+}
+
+header {
+    width: 100%;
+    height: 150px;
+    color:antiquewhite;
+    line-height: 150px;
+    background-color:darksalmon;
+    text-align: center;
+}
+
+aside {
+    width: 25%;
+    background-color: rgb(128, 234, 234);
+    min-height: 700px;
+    float: left;
+    text-align: center;
+    color: aliceblue;
+    line-height: 700px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#articles {
+    width: 75%;
+    min-height: 700px;
+    float: left;
+    background: rgb(235, 237, 178);
+    text-align: center;
+}
+
+#articles article{
+    min-height: 150px;
+    width: 25%;
+    background-color:coral;
+    color: white;
+    float: left;
+    line-height: 150px;
+    border: 1px solid gray;
+    margin: 5px;
+}
+
+@media(max-width: 880px) {
+    /*al llegar a los 880px se aplicaran los siguientes estilos*/
+    #articles article {
+        width: 40%;
+        background-color: rgba(216, 124, 201, 0.707);
+    }
+}
+
+@media(max-width: 664px) {
+    #container {
+        overflow: hidden;
+    }
+    aside {
+        float: none;
+        min-height: auto;
+        line-height: 20px;
+        width: 92%;
+        padding: 19px;
+    }
+}
+
+#articles {
+    width: 100%;
+}
+
+#articles article {
+    width: 90%;
+    background-color: rgb(235, 120, 178);
+}

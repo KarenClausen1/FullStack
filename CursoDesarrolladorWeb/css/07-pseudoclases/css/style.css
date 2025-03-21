@@ -1,0 +1,98 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+ul li {
+    font-size: 20px;
+}
+
+ul li:first-child {
+    color: purple;
+    font-weight: bold;
+}
+
+ul li:nth-child(2) {
+    color: mediumpurple;
+    font-weight: bold;
+}
+
+ul li:last-child {
+    color: deeppink;
+    font-weight: bold;
+}
+
+#mi-enlace {
+    font-size: 30px;
+    color: gray;
+}
+
+#mi-enlace:visited {
+    color: red;
+}
+
+.nav_links {
+    background-color: antiquewhite;
+}
+
+/*evento target*/
+.nav_links:target {
+    background-color: aqua;
+}
+
+:root{
+    --blue: blue; /*creamos una variable*/
+}
+
+h1{
+    color: var(--blue);
+}
+
+p::selection{
+    background-color: darkkhaki;
+}
+
+input[type="text"]::-webkit-input-placeholder { /* Chrome, Safari, Edge */
+    color: red;
+}
+
+p {
+    position: relative; /* Necesario para que el ::before absoluto se posicione correctamente */
+    padding-left: 25px; /* Espacio para la imagen */
+}
+
+p::after{
+    content: ''; /* No puede estar vacío */
+    display: block; /* Permite que width y height funcionen */
+    background-color: antiquewhite;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
