@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+        <!--poner este link para q ande boostrap-->
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <!---------------------------------------->
+</head>
+<body>
+
+    
+    <h1>aprendiendo boostrap con adrianweb.online</h1>
+    <h2>vamos a utilizar esta herramienta para diseñar</h2>
+
+<!----el container ya de por si es una caja centrada-->
+    <!--fluid ocupa un 100% la pantalla estira todo hace responsive-->
+<div class="container-fluid">
+    <!--saber q de por si 12 columnas es el maximo-->
+    <!--definir una fila-->
+    <div class="row">
+        <header class="col-12 bg-primary text-white p-2">
+            <h1>aprendiendo boostrap con adrianweb.online</h1>
+        </header>
+
+        <nav id="menu" class="col-12 bg-secondary text-white">
+            <!--le digo q voy a tener una fila con 5 columnas de igual tamaño
+            w-50 un ancho de 50% asi junto los li-->
+            <ul class="row w-50">
+                <li class="col">Inicio</li>
+                <li class="col">plantilla 1</li>
+                <li class="col">plantilla 2</li>
+                <li class="col">plantilla 3</li>
+                <li class="col">Contacto</li>
+            </ul>
+        </nav>
+
+        <section class="col-12">
+            <div class="row">
+                <section class="col-9 border">
+
+                    <h2>Cajas</h2>
+                    <hr>
+                        <!--m-2 margen poniendo col solo me adapta automaticamente 
+                        en cada row poner las col-->
+                        <div class="row">
+                            <div class="col bg-primary m-2">
+                                caja1
+                            </div>
+                            <div class="col bg-warning m-2">
+                                caja2
+                            </div>
+                            <div class="col bg-danger m-2">
+                                caja3
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="item col col-lg col-md-12 col-sm-12 bg-primary">
+                                item1
+                            </div>
+                            <div class="item col col-lg col-md-6 col-sm-6 bg-warning">
+                                item2
+                            </div>
+                            <div class="item col col-lg col-md-6 col-sm-6 bg-danger">
+                                item3
+                            </div>
+                        </div>
+
+                </section>
+
+                <aside class="col-3 border">
+                    <h2>Barra lateral</h2>
+                    <div class="lateral row bg-light">
+                        <div class="late col-4 bg-primary">
+                            numero 1
+                        </div>
+                        <div class="late col-4 bg-success">
+                            numero 2
+                        </div>
+                        <div class="late col-4 bg-warning">
+                            numero 3
+                        </div>
+                        <!--tambien con el order puedo cambiar como con flexbox-->
+                        <div class="late col-4 bg-primary order-3">
+                            numero 4
+                        </div>
+                        <div class="late col-4 bg-success order-1">
+                            numero 5
+                        </div>
+                        <div class="late col-4 bg-warning order-2">
+                            numero 6
+                        </div>
+                    </div>
+                </aside>
+
+                 <!--justify-content-start se alinean hacia la izquierda ..
+                center al centro end al final tambien puedo poner between y around-->
+                                <div class="row mt-5 justify-content-around">
+                                    <!--col-3 q va tener un ancho 16px mas o meos-->
+                                    <div class="item col-3 bg-primary m-2">
+                                        productoA
+                                    </div>
+                                    <div class="item col-3 bg-warning m-2">
+                                        productoB
+                                    </div>
+    
+                                </div>
+
+                                <div class="row">
+                                    <div class="item col-3 bg-primary ">
+                                        elemento1
+                                    </div>
+                                    <div class="item col-3 bg-warning ">
+                                        elemento2
+                                    </div>
+                                    <div class="item col-3 bg-danger ">
+                                        elemento3
+                                    </div>
+                                    <!--offset-1 le da un espaciado entre 3 y 4 de una columna-->
+                                    <div class="item col-2 bg-danger offset-1">
+                                        elemento4
+                                    </div>
+                                </div>
+
+            </div>
+        </section>
+
+    </div>
+</div>
+
+<script type="text/javascript" src="jquery/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<!-------------------------------------------->
+</body>
+</html>

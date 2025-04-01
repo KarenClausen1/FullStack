@@ -1,0 +1,526 @@
+/*FUENTES*/
+@font-face {
+    font-family: "TrebuchetMS";
+    /*nombre de la fuente*/
+    src: url(../css/font/TrebuchetMS.ttf);
+    font-weight: normal;
+    /*grosor de la fuente*/
+    font-style: normal;
+    /*estilo de la fuente*/
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url(../css/font/BebasNeue.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "webSymbolsRegular";
+    src: url("../css/font/websymbols-regular-webfont.eot");
+    src: url("../css/font/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../font/websymbols-regular-webfont.woff") format("woff"),
+        url("../css/font/websymbols-regular-webfont.ttf") format("truetype"),
+        url("../css/font/websymbols-regular-webfont.svg#WebSymbolsRegular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*GENERALES*/
+
+:root {
+    --dark-blue: hsl(233, 26%, 24%);
+    --lime-green: hsl(136, 65%, 51%);
+    --bright-cyan: hsl(192, 70%, 51%);
+    --grayish-blue: hsl(233, 8%, 62%);
+    --light-grayish-blue: hsl(220, 16%, 96%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/*Empezamos dando estilo de manera responsive*/
+
+* {
+    margin: 0px;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+}
+
+.nav {
+    background-color: var(--white);
+    height: 70px;
+    display: flex;
+    /*es un complemento de css y es para adaptar con moviles los elementos hijos de nav. Los pone en linea*/
+    justify-content: space-between;
+    /*define cómo el navegador distribuye el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor. Space-between: los elementos aparecen distribuidos uniformemente: al principio, en el centro y al final del contenedor flex. 
+    Space-around: los elementos aparecen distribuidos uniformemente, y con un espacio igual entre ellos*/
+    align-items: center;
+}
+
+
+.nav__img {
+    display: block;
+    /*asi podemos desplazarlo y manipular la imagen en forma de bloque*/
+}
+
+.nav__icon {
+    display: block;
+}
+
+
+.nav__links {
+    position: fixed;
+    /*Se mantiene en la misma posición aunque el usuario haga scroll*/
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 3em 1em;
+    /*1em toma el valor del tamaño del contenido si el contenido tiene 
+    un font-size de 50px tomaria ese valor de padding y 2em tomaria 100px de padding
+    si no tuviera un font-size toma el del padre y va sumando a sus abuelos si los tiene*/
+    box-shadow: 0 0 3px rgb(0, 0, 0, .7);
+    z-index: 1000;
+    /*el que tenga el z-index mas alto se colocara por encima*/
+    border-radius: 6px;
+    display: grid;
+    /*es un complemento de css y por defecto te da los items uno abajo del otro y ocupan cada item una fila */
+    justify-items: center;
+    /*centra los items*/
+    gap: 2em;
+    /*espaciados entre los elementos usando grid*/
+    transition: transform .3s;
+    transform: translateY(-150%);
+    /*esto es para que se oculte*/
+
+}
+
+.nav__links:target {
+    transform: translateY(0);
+    /*esto es para que vuelva a aparecer. Se posiciona en 0, que es su posicion original*/
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+
+.hero__main {
+    max-width: 1200px;
+}
+
+
+.hero__background {
+    width: 100vw;
+    height: 300px;
+    background-image: url(../img/img-hero.png);
+    background-repeat: no-repeat;
+    background-size: 100% 350px;
+    /*ancho y alto*/
+    position: relative;
+}
+
+.hero__background::before {
+    content: "";
+    background-image: url(../img/vector.svg);
+    width: 100%;
+    max-width: 1000px;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+}
+
+.hero__texts {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 80px;
+
+}
+
+.hero__title {
+    margin-top: 1em;
+    font-size: 2.3rem;
+    font-weight: 400;
+    /*el grosor de la letra*/
+    color: var(--dark-blue);
+}
+
+.hero__paragraph {
+    line-height: 1.5;
+    font-weight: 300;
+    margin: 1em 0 1.5em;
+    color: var(--grayish-blue);
+}
+
+.cta {
+    display: inline-block;
+    padding: 1em 2em;
+    background-image:
+        linear-gradient(to right, var(--dark-blue), var(--bright-cyan));
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 2em;
+}
+
+.easybank {
+
+    background-color: var(--light-grayish-blue);
+}
+
+.easybank__container {
+    text-align: center;
+    padding: 70px 0;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--dark-blue);
+}
+
+
+.easybank__paragraph {
+    line-height: 1.5;
+    margin-top: 1em;
+    margin-bottom: 4em;
+    color: var(--grayish-blue);
+}
+
+.easybank__services {
+    display: grid;
+
+    gap: 3em;
+    /*espaciado entre elementos usando grid*/
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.easybank__icon {
+    display: block;
+    margin: 0 auto;
+    width: max-content;
+
+}
+
+.img__icon {
+    width: 75px;
+    height: 75px;
+}
+
+.easybank__title {
+    margin: 1em 0;
+    color: var(--dark-blue);
+    font-weight: 400;
+}
+
+.easybank__copy {
+    line-height: 1.5;
+    color: var(--grayish-blue);
+}
+
+.articles {
+    background-color: var(--very-light-gray);
+}
+
+.articles__container {
+    padding: 70px 0;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.articles__content {
+    margin-top: 2em;
+    display: grid;
+    gap: 2em;
+    /*espaciados entre los elementos usando grid*/
+}
+
+.articles__article {
+    --img-bg: url('../img/1567497.jpg');
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 0 0 3px rgb(0, 0, 0, .2);
+    overflow: hidden;
+    text-align: left;
+}
+
+.articles__article:nth-of-type(2) {
+    /*al segundo elemento de esa clase se le aplican los siguients estilos*/
+    --img-bg: url('../img/aprender-fotografia_dest.jpg');
+}
+
+.articles__article:nth-of-type(3) {
+    --img-bg: url('../img/R1-300x250.png');
+}
+
+.articles__article:nth-of-type(4) {
+    --img-bg: url('../img/24_rest_api_tips.jpg');
+}
+
+
+.articles__img {
+    width: 100%;
+    height: 250px;
+    background-image: var(--img-bg);
+    background-size: cover;
+    background-position: center;
+}
+
+.articles__text {
+    padding: 1.5em 1em 2.5em;
+}
+
+.articles__author {
+    color: var(--grayish-blue);
+    font-size: .8rem;
+}
+
+.articles__title {
+    color: var(--dark-blue);
+    font-weight: 400;
+    margin: .7rem 0;
+}
+
+.articles__paragraph {
+    color: var(--grayish-blue);
+    line-height: 1.5;
+}
+
+/*FOOTER*/
+
+#footer {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh;
+    width: 100%;
+    height: 470px;
+     background: rgba(0, 0, 0, 0.091);
+    color: black;
+    overflow: hidden;
+    /*para ocultar lo que esta por fuera del background*/
+}
+
+#footer .wrap>div {
+    /*del footer seleccionamos la clase wrap y del wrap seleccionamos cada uno de los div*/
+    float: left;
+    width: 320px;
+    height: 370px;
+    margin: 40px;
+    text-align: center;
+    color: black;
+    font-family: 'TrebuchetMS';
+}
+
+#footer a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.569);
+    transition: all 300ms;
+}
+
+#footer h5 {
+    display: block;
+    background: white;
+    height: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: BebasNeue;
+    font-size: 25px;
+    line-height: 55px;
+    color: black;
+    border-radius: 5px;
+    /*para que se separe un poco de abajo*/
+    margin-bottom: 15px;
+}
+
+#footer ul {
+    text-align: left;
+    margin: 20px;
+    font-size: 20px;
+}
+
+#footer ul li {
+    margin-top: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+#footer ul li a {
+    display: block;
+    height: 40px;
+    transition: all 300ms;
+    /*recordar que debemos agregar una pseudoclase para que la transicion funcione correctamente*/
+}
+
+#footer ul li:hover a {
+    padding-left: 40px;
+    color: black;
+    width: 100%;
+}
+
+#footer iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px gray;
+}
+
+#footer img {
+    margin-bottom: 15px;
+}
+
+#footer #browsers img {
+    width: 45px;
+}
+
+.cta--nav {
+    display: none;
+}
+
+/*responsive*/
+/*aplica los estilos dentro de él solo si la pantalla tiene un ancho igual o mayor a 768px*/
+@media (min-width:768px) {
+    .nav__links {
+        position: unset;
+        /*unset es una propiedad no heredada,lo deja original*/
+        transform: unset;
+        /*lo deja original*/
+        /*Restaura transform, eliminando translateY(-150%) que ocultaba el menú en la versión móvil*/
+        margin: 0;
+        border-radius: 0;
+        box-shadow: unset;
+        /*lo deja original*/
+        padding: 0;
+        width: max-content;
+        /*representa el ancho máximo del contenido*/
+        display: flex;
+        gap: 1em;
+        height: 100%;
+
+    }
+
+    /*1. Antes de 768px (móvil): .nav__links está oculto (transform: translateY(-150%)) y solo aparece cuando el usuario activa el menú.
+2. Desde 768px en adelante (tablets y escritorio): Se elimina position: fixed; y transform: translateY(-150%), lo que significa que el menú se muestra siempre visible en su posición original.*/
+
+    .nav__link {
+        display: flex;
+        /*en fila*/
+        align-items: center;
+        height: 100%;
+        text-decoration: none;
+        color: var(--grayish-blue);
+        position: relative;
+    }
+
+    .nav__link::before {
+        /*ingreso antes del contenido esto*/
+        content: "";
+        position: absolute;
+        /*(por defecto se pone encima del elemento anterior)*/
+        width: 100%;
+        height: 4px;
+        background-color: var(--lime-green);
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity .3s;
+    }
+
+    .nav__link:hover::before {
+        opacity: 1;
+    }
+
+    /*quito la foto de la hamburguesa*/
+    .nav__menu {
+        display: none;
+    }
+
+    /*para mostrar el enlace tipo boton*/
+    .cta--nav {
+        display: inline-block;
+    }
+
+    .hero__main {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        height: 400px;
+        align-items: center;
+        /*centra verticalmente*/
+    }
+
+    .hero__background {
+        width: 50%;
+        height: 100%;
+        margin-top: 100px;
+        background-image: url(../img/img-hero.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left center;
+        border-radius: 900px;
+    }
+
+    .hero__background::before {
+        /* le damos estilos al vector antes de la imagen*/
+        left: unset;
+        right: 0px;
+        height: 550px;
+        background-position: 50px -100px;
+    }
+
+    .hero__texts {
+        width: 40%;
+        margin: 0 auto;
+        text-align: start;
+    }
+
+    .hero__title {
+        margin: 0;
+    }
+
+    .easybank__container {
+        text-align: start;
+    }
+
+    .easybank__paragraph {
+        width: 550px;
+    }
+
+    .easybank__services {
+        margin: 0;
+        max-width: unset;
+        grid-template-columns: repeat(4, 1fr); /*del contenedor padre sus elementos 
+        hijos ocupen cada uno una columna por eso pongo 4 porque se que son cuatro elementos
+        y q tengan una fraccion cada uno*/
+        gap: 1.5em;
+        margin-left: unset;
+    }
+
+    .articles__container {
+        text-align: start;
+    }
+
+    .articles__content {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1em;
+    }
+}

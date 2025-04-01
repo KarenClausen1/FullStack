@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=no">
+    <title>aprendiendo boostrap</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--poner este link para q ande boostrap-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!---------------------------------------->
+</head>
+
+<body>
+    <!--anchura altura para la altura hay q poner dentro de un style="height: 500px para q ande h-25-->
+    <div class="container" style="height: 500px">
+        <h1>utilidades disponibles en boostrap</h1>
+        <hr>
+
+        <!--border le doy un borde y border-primary va tener ese color--->
+        <!--rounded redondea bordes puedo poner rounded-top etc..-->
+        <!--tambien esta rounded-circle y rounded-0 lo deja por defecto-->
+        <!--<div class="caja w-25 h-25 border border-primary rounded">
+            sdsd
+        </div>-->
+        <!--tambien se le puede poner un float-start y tambien puedo ponerlo para responsive float-sm-none
+        despues entonces tengo q poner float-md-start
+        m-2 es el margen 2 es 8 pixel
+        tambien esta mt-2 q es top margen arriba l izquierda r derecha b seria bottom abajo-->
+        <div class="m-2 p-3 text-muted bg-primary float-start float-sm-none float-md-start caja w-25 h-25 border border-primary rounded">
+            caja 1
+        </div>
+        <!--puedo poner color de fondo bg-primary
+        p-3 es el padding
+        y para poner margin 0 auto para centrar se pone asi mx-auto-->
+        <div class=" m-2 p-3 text-white bg-danger float-start caja w-25 h-25 border border-success rounded">
+            caja 2
+        </div>
+        <!--text-secondary me da color a la letra-->
+        <div class="m-2 p-3 text-secondary badge-warning float-start caja w-25 h-25 border border-dark rounded">
+            caja 3
+        </div>
+
+        <!--y tambien un clearfix asi de facil-->
+        <div class="clearfix"></div>
+
+        <!--shadow-lg tambien sm y tambien none le doy una sombra
+        invisible esconde la caja y visible la muestra-->
+        <div class="visible shadow-lg mx-auto m-2 p-3 text-light bg-success caja w-25 h-25 border border-dark rounded">
+            esto es una caja no flotada
+        </div>
+
+        <hr>
+        <h2>esto es el fin del contenedor</h2>
+
+        <hr>
+        <!--display-4 o 3 o 2 o 1 tamaños grandes del texto fw-bold negrita fw-light etc..
+        fst-italic
+        text-center
+        text-decoration-none etc..-->
+        <p class="display-4 fw-bold">esto es un texto</p>
+
+        <code>
+            <!--me pone de color como para mostrar una direccion-->
+            https://adrianweb.online/
+        </code>
+    </div>
+
+</body>
+
+
+<script type="text/javascript" src="jquery/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<!-------------------------------------------->
+
+</html>
